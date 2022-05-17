@@ -1,0 +1,19 @@
+{
+  "name": "testAddAccessKey",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "near-workspaces-ava"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "homedir": "^0.6.0",
+    "near-api-js": "file:../../",
+    "near-workspaces-ava": "^1.0.0"
+  },
+  "devDependencies": {
+    "near-workspaces-ava": "^1.0.0"
+  }
+}
