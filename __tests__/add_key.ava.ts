@@ -19,4 +19,5 @@ workspace.test('add key', async(test, {alice, bob, master }) =>{
     }
     await alice.call(bob, 'set_status', argsMessage)
     test.is(await bob.view('get_status', {account_id: alice}), 'Ok')
+
 })

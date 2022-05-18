@@ -11,9 +11,11 @@
     "chalk": "^4.1.1",
     "homedir": "^0.6.0",
     "near-api-js": "file:../../",
+    "near-workspaces": "^2.0.0",
     "near-workspaces-ava": "^1.0.0"
   },
   "devDependencies": {
+    "near-workspaces": "^2.0.0",
     "near-workspaces-ava": "^1.0.0"
   }
 }
