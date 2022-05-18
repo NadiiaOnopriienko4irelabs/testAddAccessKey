@@ -10,9 +10,11 @@ async function initWorkspace(root: NearAccount) {
         '__tests__/res/access_key.wasm',
         {initialBalance: NEAR.parse('10').toJSON() }
         )
+ 
     const alice =  root.getAccount('alice.' + master.accountId);
+    const alice2 =  root.getAccount('alicce.' + master.accountId);
     const bob =  root.getAccount('bob.' + master.accountId);
-    return { alice, bob,  status_message, linkdrop, master };
+    return { alice, alice2,  bob, linkdrop, master };
 }
 
 export const workspace = Workspace.init(async ({ root }) => {
