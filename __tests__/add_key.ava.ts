@@ -28,8 +28,9 @@ workspace.test('add key', async(test, {alice, alice2, bob, master }) =>{
     }
   
     await master.call_raw(master, 'full_access_key', argFullAccess);
-    
     test.is(await alice2.call( bob, 'get_status', {account_id: alice2}), null)
+        //Alice can't call method  with her key 
+    await test.throwsAsync(async () => {await alice.call(bob, 'get_status', {account_id: alice}) });
     // can't use more gas than allowance
     const argError = {
         account_id: alice,
@@ -51,4 +52,5 @@ workspace.test('add key', async(test, {alice, alice2, bob, master }) =>{
         'The transaction contains more then one action, but it was signed with an access ' +
         'key which allows transaction to apply only one specific action. ' +
         'To apply more then one actions TX must be signed with a full access key');
+   
 })
